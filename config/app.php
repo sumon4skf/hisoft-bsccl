@@ -238,8 +238,8 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'hisoftca_bsccl',
-            'password' => 'Agm24.7@Bsccl',
+            'username' => 'root',
+            'password' => '',
             'database' => 'hisoftca_bsccl',
             'encoding' => 'utf8',
             'timezone' => 'UTC',

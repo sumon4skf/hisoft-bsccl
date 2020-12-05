@@ -7,71 +7,67 @@ Router::defaultRouteClass('DashedRoute');
 
 Router::scope('/', function ($routes) {
 
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'home', 'home']);
+  $routes->connect('/', ['controller' => 'Pages', 'action' => 'home', 'home']);
 
-    $routes->connect('/login', ['controller' => 'Users', 'action' => 'login', 'login']);
+  $routes->connect('/login', ['controller' => 'Users', 'action' => 'login', 'login']);
 
-    $routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout', 'logout']);
+  $routes->connect('/check-otp', ['controller' => 'Users', 'action' => 'users_otp']);
 
-    $routes->connect('/forgot-password', ['controller' => 'Users', 'action' => 'forgot-password', 'forgotPassword']);
+  $routes->connect('/logout', ['controller' => 'Users', 'action' => 'logout', 'logout']);
 
-    $routes->connect('/signup', ['controller' => 'Users', 'action' => 'signup', 'signUp']);
+  $routes->connect('/forgot-password', ['controller' => 'Users', 'action' => 'forgot-password', 'forgotPassword']);
 
-    $routes->connect('/guest', ['controller' => 'Users', 'action' => 'guest', 'guest']);
+  $routes->connect('/signup', ['controller' => 'Users', 'action' => 'signup', 'signUp']);
 
-    $routes->connect('/profile', ['controller' => 'Users', 'action' => 'profile', 'profile']);
+  $routes->connect('/guest', ['controller' => 'Users', 'action' => 'guest', 'guest']);
 
-    $routes->connect('/about-us', ['controller' => 'Pages', 'action' => 'about_us', 'about_us']);
+  $routes->connect('/profile', ['controller' => 'Users', 'action' => 'profile', 'profile']);
 
-    $routes->connect('/contributions', ['controller' => 'Shops', 'action' => 'contributions', 'contributions']);
+  $routes->connect('/about-us', ['controller' => 'Pages', 'action' => 'about_us', 'about_us']);
 
-    $routes->connect('/join-meeting', ['controller' => 'Pages', 'action' => 'joinMeeting', 'joinMeeting']);
+  $routes->connect('/contributions', ['controller' => 'Shops', 'action' => 'contributions', 'contributions']);
 
-    $routes->connect('/gallery-details/*', ['controller' => 'Pages', 'action' => 'galleryDetails', 'galleryDetails']);
+  $routes->connect('/join-meeting', ['controller' => 'Pages', 'action' => 'joinMeeting', 'joinMeeting']);
 
-    $routes->connect('/gallery', ['controller' => 'Pages', 'action' => 'gallery', 'gallery']);
+  $routes->connect('/gallery-details/*', ['controller' => 'Pages', 'action' => 'galleryDetails', 'galleryDetails']);
 
-    $routes->connect('/large-view', ['controller' => 'Pages', 'action' => 'largeView', 'largeView']);
+  $routes->connect('/gallery', ['controller' => 'Pages', 'action' => 'gallery', 'gallery']);
 
-    $routes->fallbacks('DashedRoute');
+  $routes->connect('/large-view', ['controller' => 'Pages', 'action' => 'largeView', 'largeView']);
+
+  $routes->fallbacks('DashedRoute');
 });
 
 Plugin::routes();
 
 Router::scope('/admin', function ($routes) {
 
-    /* Routes For Admin */
-    Router::prefix('admin', function ($routes) {
+  /* Routes For Admin */
+  Router::prefix('admin', function ($routes) {
 
-        $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
-
-        $routes->fallbacks('DashedRoute');
-
-
-        $routes->connect('/dashboard', ['controller' => 'Dashboard', 'action' => 'index']);
-
-        $routes->connect('/admins', ['controller' => 'users', 'action' => 'admin_index']);
-
-        $routes->connect('/admins/add/*', ['controller' => 'users', 'action' => 'add_admin']);
-
-        $routes->connect('/admins/edit/*', ['controller' => 'users', 'action' => 'edit_admin']);
-
-        $routes->connect('/products/combinations/add/*', ['controller' => 'Products', 'action' => 'combinationsAdd']);
-
-        $routes->connect('/admins/send-email', ['controller' => 'events', 'action' => 'sendEmail']);
-
-        $routes->connect('/admins/send-sms', ['controller' => 'events', 'action' => 'sendSms']);
-
-    });
+    $routes->connect('/', ['controller' => 'Users', 'action' => 'login']);
 
     $routes->fallbacks('DashedRoute');
 
+
+    $routes->connect('/dashboard', ['controller' => 'Dashboard', 'action' => 'index']);
+
+    $routes->connect('/admins', ['controller' => 'users', 'action' => 'admin_index']);
+
+    $routes->connect('/admins/add/*', ['controller' => 'users', 'action' => 'add_admin']);
+
+    $routes->connect('/admins/edit/*', ['controller' => 'users', 'action' => 'edit_admin']);
+
+    $routes->connect('/products/combinations/add/*', ['controller' => 'Products', 'action' => 'combinationsAdd']);
+
+    $routes->connect('/admins/send-email', ['controller' => 'events', 'action' => 'sendEmail']);
+
+    $routes->connect('/admins/send-sms', ['controller' => 'events', 'action' => 'sendSms']);
+  });
+
+  $routes->fallbacks('DashedRoute');
 });
 
 Plugin::routes();
 
 Router::defaultRouteClass('Route');
-
-
-
-
