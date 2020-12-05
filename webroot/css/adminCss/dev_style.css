@@ -1,0 +1,57 @@
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #fff;
+    -webkit-box-shadow: inset 0 100px 0 #fff !important;
+    box-shadow: inset 0 100px 0 #fff !important;
+}
+
+.error{
+    color: red;
+}
+.colorbox-login-modal #colorbox{
+    background: white !important;
+}
+.margin-top-70{
+    margin-top: 70px;
+}
+.margin-top-20{
+    margin-top: 20px;
+}
+.status_image{
+    width: 30px;
+}
+
+.main-container #site-search{
+    position: relative;
+}
+
+.app.theme-seven .main-container .nav-wrap .nav-head {
+    /*background: #666;*/
+}
+.app.theme-seven .site-head {
+    /*background: #888;*/
+}
+
+.actions .fa{
+    /*color: #666;*/
+}
+
+.main-container #site-search button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    background: none;
+}
+
+.size-20{
+    font-size: 20px !important;
+    color: #f44336;
+    margin-left: 4px !important;
+}
+.products-attributes .form-group {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+

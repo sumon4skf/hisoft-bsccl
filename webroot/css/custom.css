@@ -1,0 +1,49 @@
+/* Add here all your CSS customizations */
+
+.agenda-active {color:#da7940 !important; }
+
+.agenda-list{
+    /*text-align: center;*/
+    /*width: 175px;*/
+    padding: 6px;
+    font-weight: bold;
+}
+
+.agenda-text{
+    text-align: center;
+}
+
+.agenda-title{
+    text-align: center;
+    background-color: #FF7F27;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.agenda-info{
+    text-align: center;
+    background-color: #FF7F27;
+    padding: 9px;
+    width: 138px;
+    margin: 6px 0 0 49px;
+    color: white;
+}
+
+.agenda-info-text{
+    text-align: center;
+    padding-top: 3px;
+    width: 138px;
+    margin: 0 0 0 49px;
+    color: black;
+    font-weight: bold;
+}
+
+.agenda-info-popup{
+    text-align: center;
+    background-color: #FF7F27;
+    padding: 9px;
+    width: 190px;
+    margin: 6px 0 0 49px;
+    color: white;
+}
